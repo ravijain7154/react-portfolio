@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+  height: 100%;
+  width: 90px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  /* padding: 15px; */
+  border-bottom: 1px solid #ccc;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add this to App.css */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+#root{
+/* background-color: #282c34; */
+color: #fff;
+/* padding-bottom: 50px; */
+background: linear-gradient(355deg, rgb(230 230 230) 0%, rgb(37 41 53) 0%, rgb(138 57 218) 100%) !important;
+}
+
+.app-section-form {
+  padding: 50px 0px;
+}
+.app-section-form form {
+  max-width: 450px;
+  border: 1px solid #ccc;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(11px);
+  background-color: #31353c29;
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+  margin: auto;
+}
+.app-section-form form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+section.app-section-form form .form-group input,
+  section.app-section-form form .form-group .textarea {
+  padding: 8px 15px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px 1px #ccc;
+}
+section.app-section-form form .form-group .textarea:focus-visible,
+section.app-section-form form .form-group input:focus-visible {
+  outline: none;
+}
+section.app-section-form form .form-group .textarea:hover,
+section.app-section-form form .form-group input:hover {
+  border: 2px solid #00af0c;
+}
+section.app-section-form form button {
+  margin-top: 15px;
+  padding: 10px 10px;
+  width: 100%;
+  border: 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+}
+section.app-section-form form button:hover {
+  cursor: pointer;
+  background-color: #282c34;
+  color: #fff;
+  transition: all 0.2s ease-in;
+}
+
+.Data_view .data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Data_view .data .data_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel_banner{
+  object-fit: cover;
+}
+#home_carousel .carousel-caption {
+  color: #fff !important;
+
+}
