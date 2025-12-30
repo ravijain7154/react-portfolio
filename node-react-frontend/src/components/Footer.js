@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="footer-inner">
         <div className="footer-left">
           <a className="nav-link" href="/about">About</a>
-          <a className="nav-link" href="#skills">Skills</a>
-          <a className="nav-link" href="/#myprojects">Projects</a>
-          <a className="nav-link" href="#contact">Contact</a>
+          <a className="nav-link" href="/#skills">Skills</a>
+          <a className="nav-link" href="/#myproject">Projects</a>
+          <a className="nav-link" href="/#contact">Contact</a>
         </div>
         <div className="footer-center">
           <a href="/" class="navbar-brand">  
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
       </div>
         <div className="footer-bottom">
-          <h6>© Copyright @Ravi Jain 2025</h6>
+          <h6>©Copyright @Ravi Jain 2025</h6>
         </div>
       </div>
 

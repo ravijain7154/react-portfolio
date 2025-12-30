@@ -30,16 +30,15 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api', formRoutes);
 app.use('/api', contactRoutes);
 
-
 app.use('/upload', uploadRoutes);
 
 // Serve React app (if it's built)
-app.use(express.static(path.join(__dirname, 'node-react-frontend/build')));
+// app.use(express.static(path.join(__dirname, './node-react-frontend/build')));
 
-// Catch-all handler for React Router
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'node-react-frontend/build', 'index.html'));
-});
+// // Catch-all handler for React Router
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, './node-react-frontend/build', 'index.html'));
+// });
 
 // Test Route
 app.get('/', (req, res) => {

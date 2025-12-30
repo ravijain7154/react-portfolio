@@ -20,15 +20,15 @@ const submitForm = (req, res) => {
       return res.status(400).send({ message: 'Email already exists' });
     }
 
-  const query = 'INSERT INTO form_data (name, email, image) VALUES (?, ?, ?)';
-  db.execute(query, [name, email, image], (err, results) => {
-    if (err) {
-      console.error('Error while inserting data:', err);
-      return res.status(500).send({ message: 'Error saving data', error: err });
-    }
-    res.status(201).send({ message: 'Data saved successfully', id: results.insertId });
+    const query = 'INSERT INTO form_data (name, email, image) VALUES (?, ?, ?)';
+    db.execute(query, [name, email, image], (err, results) => {
+      if (err) {
+        console.error('Error while inserting data:', err);
+        return res.status(500).send({ message: 'Error saving data', error: err });
+      }
+      res.status(201).send({ message: 'Data saved successfully', id: results.insertId });
+    });
   });
-});
 };
 
 

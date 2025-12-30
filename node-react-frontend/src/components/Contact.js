@@ -62,9 +62,7 @@ function Contact() {
           <div className='row mx-0'>
             <div className='col-md-4'>
             <div className='img_box mb-3'>
-              <img
-                    src={`/Assets/about.png`}
-                    alt="home pic"
+              <img src={`/Assets/about.png`} alt="home pic"
                     className="img-fluid"
                     style={{ maxHeight: "100%" }}
                   />
@@ -100,9 +98,8 @@ function Contact() {
             </div>
             </div>
             <div className='col-md-8'>
-            
               <form className="custom_form" onSubmit={handleSubmit}>
-                <div className='form-group'>
+                    <div className='form-group'>
                       <label>Name</label>
                       <input type='text' value={name} onChange={(e) => setName(e.target.value)} required/>
                     </div>
@@ -111,20 +108,19 @@ function Contact() {
                       <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
                     </div>
                     <div className='form-group'>
-                    <label>Message</label>
-                    <textarea 
-                      placeholder="Your Message" 
-                      value={message} 
-                      onChange={(e) => setMessage(e.target.value)} 
-                      className='textarea'
-                      required
-                    />
-                  </div>
+                      <label>Message</label>
+                      <textarea 
+                        placeholder="Your Message" 
+                        value={message} 
+                        onChange={(e) => setMessage(e.target.value)} 
+                        className='textarea'
+                        required
+                      />
+                    </div>
                 <button className='custom_btn submit_btn' type="submit">Send Message</button>
               </form>
-          {status && <p>{status}</p>}
+              {status && <p>{status}</p>}
             </div>
-          
           </div>
         </div>
       </div>

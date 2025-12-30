@@ -53,10 +53,7 @@ const storage = multer.diskStorage({
     fs.mkdirSync('uploads');
   }
 
-
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-
-
 
 app.post('/submit', upload.single('image'), (req, res) => {
   
@@ -79,31 +76,39 @@ app.post('/submit', upload.single('image'), (req, res) => {
 });
 
 app.get('/data', (req, res) => {
-    const query = 'SELECT * FROM form_data';
-    db.execute(query, (err, results) => {
-        if (err) {
-          return res.status(500).send({ message: 'Error fetching data', error: err });
-        }
-        res.status(200).json(results);
+  const query = 'SELECT * FROM form_data';
+
+  db.execute(query, (err, results) => {
+    if (err) {
+      console.error('Database error:', err);
+      return res.status(500).json({
+        message: 'Error fetching data from the database',
+        error: err.message
       });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: results
+    });
   });
+});
+
 
 // const path = require('path');
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// app.use(express.static(path.join(__dirname, './node-react-frontend/build')));
 
-app.use(express.static(path.join(__dirname, 'node-react-frontend/build')));
-
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'node-react-frontend/build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, './node-react-frontend/build', 'index.html'));
+// });
 
 // Middleware to handle JSON data
 
 // Test Route
 app.get('/', (req, res) => {
-  res.send('Hello from Node.js!');
+  res.send('Hello from Node.js s!');
 });
 
 // Start server
