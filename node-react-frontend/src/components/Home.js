@@ -490,8 +490,7 @@ const ContactSection = () => {
             <div className='col-md-4'>
               <ScrollAnimation animateIn='fadeInLeft' delay={0.25}>
                 <div className='img_box mb-3'>
-                  <img
-                        src={`/Assets/about.png`}
+                  <img src={`/Assets/about.png`}
                         alt="home pic"
                         className="img-fluid"
                         style={{ maxHeight: "100%" }}
